@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary-500: #E11D48;
+  /* 春节红 */
+  --color-primary-600: #BE123C;
+  --color-secondary-500: #F59E0B;
+  /* 高定金 */
+
+  --color-bg-base: #F8FAFC;
+  --color-text-main: #1E293B;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg-base, #F8FAFC);
+  color: var(--color-text-main, #1E293B);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 隐藏滚动条，保持极简 */
+::-webkit-scrollbar {
+  display: none;
+}
