@@ -93,19 +93,22 @@ export default function RedPacketModule() {
                     >收压岁钱</button>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex flex-col gap-3">
                     <input
                         type="text"
                         placeholder="谁/给谁"
                         value={name} onChange={e => setName(e.target.value)}
-                        className="flex-1 bg-slate-50 border border-slate-200 p-4 rounded-2xl text-sm font-semibold focus:outline-rose-500"
+                        className="w-full bg-slate-50 border border-slate-200 p-4 rounded-2xl text-sm font-semibold focus:outline-rose-500"
                     />
-                    <input
-                        type="number"
-                        placeholder="金额"
-                        value={amount} onChange={e => setAmount(e.target.value)}
-                        className="w-28 bg-slate-50 border border-slate-200 p-4 rounded-2xl text-sm font-bold text-center focus:outline-rose-500"
-                    />
+                    <div className="relative w-full">
+                        <span className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">¥</span>
+                        <input
+                            type="number"
+                            placeholder="金额"
+                            value={amount} onChange={e => setAmount(e.target.value)}
+                            className="w-full bg-slate-50 border border-slate-200 p-4 pl-10 rounded-2xl text-sm font-bold focus:outline-rose-500"
+                        />
+                    </div>
                 </div>
 
                 <button
